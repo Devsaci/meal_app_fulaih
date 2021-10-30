@@ -43,7 +43,7 @@ Meal meal = Meal(
   complexity: Complexity.Simple,
   isGlutenFree: null,
   duration: null,
-  affordability: null,
+  affordability: Affordability.Luxurious,
   isLactoseFree: null,
   imageUrl: '',
   categories: [],
