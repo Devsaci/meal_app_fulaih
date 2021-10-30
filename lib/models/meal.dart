@@ -13,15 +13,15 @@ enum Affordability {
 
 class Meal {
   @required final String id;
-  final List<String> categories;
-  final String imageUrl;
-  final int duration;
-  final Complexity complexity;
-  final Affordability affordability;
-  final bool isGlutenFree;
-  final bool isLactoseFree;
-  final bool isVegan;
-  final bool isVegetarian;
+  @required final List<String> categories;
+  @required final String imageUrl;
+  @required final int duration;
+  @required final Complexity complexity;
+  @required final Affordability affordability;
+  @required final bool isGlutenFree;
+  @required final bool isLactoseFree;
+  @required final bool isVegan;
+  @required final bool isVegetarian;
 
   Meal({
     this.id,
