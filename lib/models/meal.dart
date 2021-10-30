@@ -13,6 +13,9 @@ enum Affordability {
 
 class Meal {
   final String id;
+  final String title;
+  final List<String> ingredients;
+  final List<String> steps;
   final List<String> categories;
   final String imageUrl;
   final int duration;
@@ -34,18 +37,21 @@ class Meal {
     @required this.isLactoseFree,
     @required this.isVegan,
     @required this.isVegetarian,
+    @required this.title,
+    @required this.ingredients,
+    @required this.steps,
   });
 }
 
-Meal meal = Meal(
-  id: '',
-  isVegetarian: null,
-  complexity: Complexity.Simple,
-  isGlutenFree: null,
-  duration: null,
-  affordability: Affordability.Luxurious,
-  isLactoseFree: null,
-  imageUrl: '',
-  categories: [],
-  isVegan: null,
-);
+// Meal meal = Meal(
+//   id: '',
+//   isVegetarian: null,
+//   complexity: Complexity.Simple,
+//   isGlutenFree: null,
+//   duration: null,
+//   affordability: Affordability.Luxurious,
+//   isLactoseFree: null,
+//   imageUrl: '',
+//   categories: [],
+//   isVegan: null,
+// );
