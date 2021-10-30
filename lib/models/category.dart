@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class Category {
@@ -7,5 +5,9 @@ class Category {
   final String title;
   final Color color;
 
-  Category(this.id, this.title, this.color);
+  const Category({
+    this.id,
+    this.title,
+    this.color,
+  });
 }
