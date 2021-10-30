@@ -40,7 +40,7 @@ class Meal {
 Meal meal = Meal(
   id: '',
   isVegetarian: null,
-  complexity: null,
+  complexity: Complexity.Simple,
   isGlutenFree: null,
   duration: null,
   affordability: null,
