@@ -9,7 +9,9 @@ class Categoryitem extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables
   Categoryitem(this.id, this.title, this.color, {Key key}) : super(key: key);
 
-  get selectCategory => null;
+  void selectCategory (BuildContext context){
+
+  }
 
   @override
   Widget build(BuildContext context) {
