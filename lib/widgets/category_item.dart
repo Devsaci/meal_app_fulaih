@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Categoryitem extends StatelessWidget {
-
   final String id;
   final String title;
   final Color color;
@@ -16,20 +15,18 @@ class Categoryitem extends StatelessWidget {
       onTap: () {},
       child: Container(
         padding: EdgeInsets.all(15),
-        child: Text(title),
+        child: Text(
+          title,
+          style: Theme.of(context).textTheme.subtitle1,
+        ),
         decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                color.withOpacity(0.2),
-                color
-              ],
+              colors: [color.withOpacity(0.2), color],
               begin: Alignment.topLeft,
-              end:Alignment.bottomRight,),
+              end: Alignment.bottomRight,
+            ),
             color: color,
-            borderRadius: BorderRadius.circular(20)
-
-        ),
-
+            borderRadius: BorderRadius.circular(20)),
       ),
     );
   }

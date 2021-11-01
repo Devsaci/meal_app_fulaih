@@ -9,9 +9,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
+        accentColor: Colors.amber,
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        textTheme: ThemeData.light().textTheme.copyWith(
+              bodyText1: TextStyle(
+                color: Color.fromRGBO(20, 50, 50, 1),
+              ),
+              bodyText2: TextStyle(
+                color: Color.fromRGBO(20, 50, 50, 1),
+              ),
+              subtitle1: TextStyle(
+                fontFamily: 'RobotoCondensed',
+                fontSize: 18
+              ),
+            ),
       ),
       home: MyHomePage(),
     );
