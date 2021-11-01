@@ -8,7 +8,8 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView(
         padding: EdgeInsets.all(25),
-        children: DUMMY_CATEGORIES.map((e) => null).toList(),
+        children:
+            DUMMY_CATEGORIES.map((catData) => Text(catData.title)).toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
