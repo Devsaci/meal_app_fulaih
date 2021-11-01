@@ -16,7 +16,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text("CategoryMealsScreen"),),
-      body: const Center(
+      body:  Center(
           child:  Text("CategoryMealsScreen"),
 
       ),

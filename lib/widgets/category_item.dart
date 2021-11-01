@@ -20,11 +20,15 @@ class Categoryitem extends StatelessWidget {
       onTap: () {
         selectCategory(context);
       },
+      splashColor: Theme.of(context).primaryColor,
       child: Container(
         padding: EdgeInsets.all(15),
         child: Text(
           title,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme
+              .of(context)
+              .textTheme
+              .subtitle1,
         ),
         decoration: BoxDecoration(
             gradient: LinearGradient(
