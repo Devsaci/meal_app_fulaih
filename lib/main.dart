@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: MyHomePage(),
+      // home: MyHomePage(),
+      home: CategoriesScreen(),
     );
   }
 }
