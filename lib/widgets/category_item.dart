@@ -16,6 +16,11 @@ class Categoryitem extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(15),
         child: Text(title),
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(20)
+
+        ),
 
       ),
     );
