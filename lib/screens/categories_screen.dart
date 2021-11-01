@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_app_fulaih/dummy_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({Key key}) : super(key: key);
@@ -7,9 +8,7 @@ class CategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView(
         padding: EdgeInsets.all(25),
-        children: [
-
-        ],
+        children: DUMMY_CATEGORIES.map((e) => null).toList(),
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           childAspectRatio: 3 / 2,
