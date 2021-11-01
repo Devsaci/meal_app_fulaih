@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // ignore: prefer_const_constructors
         title: Text("Meal AppFoulaih sdk: >=2.7.0 <3.0.0"),
       ),
-      body: CategoriesScreen(),
+      body: null,
     );
   }
 }
