@@ -11,7 +11,13 @@ class Categoryitem extends StatelessWidget {
   Categoryitem(this.id, this.title, this.color, {Key key}) : super(key: key);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(CategoryMealsScreen.routeName);
+    Navigator.of(ctx).pushNamed(
+      CategoryMealsScreen.routeName,
+      arguments: {
+        'id': id,
+        'title': title,
+      },
+    );
   }
 
   @override
@@ -21,14 +27,12 @@ class Categoryitem extends StatelessWidget {
         selectCategory(context);
       },
       splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(20),
       child: Container(
         padding: EdgeInsets.all(15),
         child: Text(
           title,
-          style: Theme
-              .of(context)
-              .textTheme
-              .subtitle1,
+          style: Theme.of(context).textTheme.subtitle1,
         ),
         decoration: BoxDecoration(
             gradient: LinearGradient(
