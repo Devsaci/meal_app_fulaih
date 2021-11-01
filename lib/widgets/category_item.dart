@@ -9,7 +9,7 @@ class Categoryitem extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables
   Categoryitem(this.id, this.title, this.color, {Key key}) : super(key: key);
 
-  void selectCategory (BuildContext context){
+  void selectCategory (BuildContext ctx){
 
   }
 
@@ -17,7 +17,7 @@ class Categoryitem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        selectCategory;
+        selectCategory(context);
       },
       child: Container(
         padding: EdgeInsets.all(15),
