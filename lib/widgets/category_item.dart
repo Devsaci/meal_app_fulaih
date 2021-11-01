@@ -9,10 +9,14 @@ class Categoryitem extends StatelessWidget {
   // ignore: prefer_const_constructors_in_immutables
   Categoryitem(this.id, this.title, this.color, {Key key}) : super(key: key);
 
+  get selectCategory => null;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        selectCategory;
+      },
       child: Container(
         padding: EdgeInsets.all(15),
         child: Text(
