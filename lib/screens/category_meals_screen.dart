@@ -15,9 +15,10 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
     final routeArg = ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
+    final categorytitle = routeArg['title'];
     return Scaffold(
       appBar: AppBar(
-        title: Text("CategoryMealsScreen"),
+        title: Text(categorytitle),
       ),
       body: Center(
         child: Text("CategoryMealsScreen"),
