@@ -23,17 +23,13 @@ class MyApp extends StatelessWidget {
               bodyText2: TextStyle(
                 color: Color.fromRGBO(20, 50, 50, 1),
               ),
-              subtitle1: TextStyle(
-                fontFamily: 'RobotoCondensed',
-                fontSize: 18
-              ),
+              subtitle1: TextStyle(fontFamily: 'RobotoCondensed', fontSize: 18),
             ),
       ),
       // home: MyHomePage(),
       routes: {
         '/': (context) => CategoriesScreen(),
         CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
-
       },
     );
   }
