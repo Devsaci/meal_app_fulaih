@@ -10,6 +10,9 @@ class MealItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: selectMeal,
+      child: Card(
+
+      ),
     );
   }
 }
