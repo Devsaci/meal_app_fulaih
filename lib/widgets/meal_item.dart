@@ -18,7 +18,11 @@ class MealItem extends StatelessWidget {
             Stack(
               children: [
                 ClipRRect(
-
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
+                  ),
+                  child: Image.network("src"),
                 )
 
               ],
