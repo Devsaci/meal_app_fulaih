@@ -24,7 +24,7 @@ class MealItem extends StatelessWidget {
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  child: Image.network("src"),
+                  child: Image.network(imageUrl),
                 )
               ],
             )
