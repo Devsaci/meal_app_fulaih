@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MealItem extends StatelessWidget {
-  MealItem({Key key, this.imageUrl});
+  MealItem( {Key key, this.imageUrl,});
 
   final String imageUrl;
 
