@@ -14,6 +14,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   Widget build(BuildContext context) {
 
     final routeArg = ModalRoute.of(context).settings.arguments as Map<String, String>;
+    final categoryId = routeArg['id'];
     return Scaffold(
       appBar: AppBar(
         title: Text("CategoryMealsScreen"),
