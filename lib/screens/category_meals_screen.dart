@@ -14,18 +14,19 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   @override
   Widget build(BuildContext context) {
     final routeArg =
-    ModalRoute
-        .of(context)
-        .settings
-        .arguments as Map<String, String>;
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
     final categorytitle = routeArg['title'];
-    final categoryMeals = DUMMY_MEALS.where((element) => false).toList();
+    final categoryMeals = DUMMY_MEALS.where((meal) {
+      return meal.categories.contains(categoryId);
+    }).toList();
     return Scaffold(
       appBar: AppBar(
         title: Text(categorytitle),
       ),
-      body: ListView.builder(itemBuilder: (ctx, index){}, ),
+      body: ListView.builder(
+        itemBuilder: (ctx, index) {},
+      ),
     );
   }
 }
