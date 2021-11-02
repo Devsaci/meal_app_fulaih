@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MealItem extends StatelessWidget {
-  MealItem({Key key});
+  MealItem({Key key, this.imageUrl});
+
+  final String imageUrl;
 
   void selectMeal() {}
 
@@ -11,8 +13,8 @@ class MealItem extends StatelessWidget {
       onTap: selectMeal,
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          elevation: 2,
-          margin: EdgeInsets.symmetric(vertical: 15,horizontal: 10),
+        elevation: 2,
+        margin: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         child: Column(
           children: [
             Stack(
@@ -24,7 +26,6 @@ class MealItem extends StatelessWidget {
                   ),
                   child: Image.network("src"),
                 )
-
               ],
             )
           ],
