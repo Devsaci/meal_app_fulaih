@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/dummy_data.dart';
+import '../widgets/meal_item.dart';
 
 class CategoryMealsScreen extends StatefulWidget {
   CategoryMealsScreen({Key key});
@@ -26,7 +27,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
-          return Text(categoryMeals[index].title);
+          return MealItem();
         },
         itemCount: categoryMeals.length,
       ),
