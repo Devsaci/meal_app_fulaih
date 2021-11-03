@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import '../models/meal.dart';
 
 class MealItem extends StatelessWidget {
-  MealItem( {Key key, this.imageUrl,});
-
+  final String title;
+  final int duration;
   final String imageUrl;
+  final Complexity complexity;
+  final Affordability affordability;
+
+  const MealItem(
+    this.title,
+    this.duration,
+    this.imageUrl,
+    this.complexity,
+    this.affordability,
+  );
 
   void selectMeal() {}
 
@@ -14,7 +25,7 @@ class MealItem extends StatelessWidget {
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         elevation: 2,
-        margin: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+        margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
         child: Column(
           children: [
             Stack(
