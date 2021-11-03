@@ -41,7 +41,16 @@ class MealItem extends StatelessWidget {
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
-                )
+                ),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                  ),
+                  softWrap: true,
+                  overflow: TextOverflow.fade,
+                ),
               ],
             )
           ],
