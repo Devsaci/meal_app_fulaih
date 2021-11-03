@@ -64,7 +64,32 @@ class MealItem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(8.0),
-              child: Row(),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Row(
+                    children: [
+                      Icon(Icons.schedule, color: Theme.of(context).primaryColor),
+                      SizedBox(width: 6),
+                      Text("duration")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.work, color: Theme.of(context).primaryColor),
+                      SizedBox(width: 6),
+                      Text("complexity")
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
+                      SizedBox(width: 6),
+                      Text("affordability")
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
