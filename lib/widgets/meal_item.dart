@@ -16,6 +16,15 @@ class MealItem extends StatelessWidget {
     @required this.affordability,
   });
 
+  String get complexityText{
+    switch(complexity){
+      case Complexity.Simple: return 'Simple'; break;
+      case Complexity.Challenging: return 'Challenging'; break;
+      case Complexity.Hard: return 'Hard'; break;
+      default: return 'Unknown'; break;
+    }
+  }
+
   void selectMeal() {}
 
   @override
@@ -64,30 +73,30 @@ class MealItem extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(20.0),
-              child: Column(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Row(
                     children: [
                       Icon(Icons.schedule, color: Theme.of(context).primaryColor),
                       SizedBox(width: 6),
-                      Text("duration $duration min",style: TextStyle(fontSize: 12),)
+                      Text("$duration min",style: TextStyle(fontSize: 12),)
                     ],
                   ),
                   Row(
                     children: [
                       Icon(Icons.work, color: Theme.of(context).primaryColor),
                       SizedBox(width: 6),
-                      Text("$complexity complexity",style: TextStyle(fontSize: 12),)
+                      Text("$complexityText ",style: TextStyle(fontSize: 12),)
                     ],
                   ),
-                  Row(
-                    children: [
-                      Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
-                      SizedBox(width: 6),
-                      Text("$affordability affordability",style: TextStyle(fontSize: 12),)
-                    ],
-                  ),
+                  // Row(
+                  //   children: [
+                  //     Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
+                  //     SizedBox(width: 6),
+                  //     Text("$affordability affordability",style: TextStyle(fontSize: 12),)
+                  //   ],
+                  // ),
                 ],
               ),
             ),
