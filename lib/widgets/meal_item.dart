@@ -24,6 +24,14 @@ class MealItem extends StatelessWidget {
       default: return 'Unknown'; break;
     }
   }
+  String get affordabilityText{
+    switch(affordability){
+      case Affordability.Affordable: return 'Affordable'; break;
+      case Affordability.Pricey: return 'Pricey'; break;
+      case Affordability.Luxurious: return 'Luxurious'; break;
+      default: return 'Unknown'; break;
+    }
+  }
 
   void selectMeal() {}
 
@@ -90,13 +98,13 @@ class MealItem extends StatelessWidget {
                       Text("$complexityText ",style: TextStyle(fontSize: 12),)
                     ],
                   ),
-                  // Row(
-                  //   children: [
-                  //     Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
-                  //     SizedBox(width: 6),
-                  //     Text("$affordability affordability",style: TextStyle(fontSize: 12),)
-                  //   ],
-                  // ),
+                  Row(
+                    children: [
+                      Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
+                      SizedBox(width: 6),
+                      Text("$affordabilityText",style: TextStyle(fontSize: 12),)
+                    ],
+                  ),
                 ],
               ),
             ),
