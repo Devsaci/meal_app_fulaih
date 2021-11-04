@@ -16,20 +16,37 @@ class MealItem extends StatelessWidget {
     @required this.affordability,
   });
 
-  String get complexityText{
-    switch(complexity){
-      case Complexity.Simple: return 'Simple'; break;
-      case Complexity.Challenging: return 'Challenging'; break;
-      case Complexity.Hard: return 'Hard'; break;
-      default: return 'Unknown'; break;
+  String get complexityText {
+    switch (complexity) {
+      case Complexity.Simple:
+        return 'Simple';
+        break;
+      case Complexity.Challenging:
+        return 'Challenging';
+        break;
+      case Complexity.Hard:
+        return 'Hard';
+        break;
+      default:
+        return 'Unknown';
+        break;
     }
   }
-  String get affordabilityText{
-    switch(affordability){
-      case Affordability.Affordable: return 'Affordable'; break;
-      case Affordability.Pricey: return 'Pricey'; break;
-      case Affordability.Luxurious: return 'Luxurious'; break;
-      default: return 'Unknown'; break;
+
+  String get affordabilityText {
+    switch (affordability) {
+      case Affordability.Affordable:
+        return 'Affordable';
+        break;
+      case Affordability.Pricey:
+        return 'Pricey';
+        break;
+      case Affordability.Luxurious:
+        return 'Luxurious';
+        break;
+      default:
+        return 'Unknown';
+        break;
     }
   }
 
@@ -86,23 +103,34 @@ class MealItem extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.schedule, color: Theme.of(context).primaryColor),
+                      Icon(Icons.schedule,
+                          color: Theme.of(context).primaryColor),
                       SizedBox(width: 6),
-                      Text("$duration min",style: TextStyle(fontSize: 12),)
+                      Text(
+                        "$duration min",
+                        style: TextStyle(fontSize: 12),
+                      )
                     ],
                   ),
                   Row(
                     children: [
                       Icon(Icons.work, color: Theme.of(context).primaryColor),
                       SizedBox(width: 6),
-                      Text("$complexityText ",style: TextStyle(fontSize: 12),)
+                      Text(
+                        "$complexityText ",
+                        style: TextStyle(fontSize: 12),
+                      )
                     ],
                   ),
                   Row(
                     children: [
-                      Icon(Icons.attach_money, color: Theme.of(context).primaryColor),
+                      Icon(Icons.attach_money,
+                          color: Theme.of(context).primaryColor),
                       SizedBox(width: 6),
-                      Text("$affordabilityText",style: TextStyle(fontSize: 12),)
+                      Text(
+                        "$affordabilityText",
+                        style: TextStyle(fontSize: 12),
+                      )
                     ],
                   ),
                 ],
