@@ -44,7 +44,7 @@ class MealDetailScreen extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (ctx, index) => Card(
                   color: Theme.of(context).accentColor,
-                  child: Text(selectedMeal.ingredients[index]),(
+                  child: Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(selectedMeal.ingredients[index]),
                   )),
