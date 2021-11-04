@@ -12,7 +12,7 @@ class MealDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(mealId),
+        title: Text(selectedMeal.title),
       ),
       body: Column(
         children: [
@@ -21,6 +21,7 @@ class MealDetailScreen extends StatelessWidget {
             width: double.infinity,
             child: Image.network(
               selectedMeal.imageUrl,
+              fit:  BoxFit.cover,
             ),
           ),
         ],
