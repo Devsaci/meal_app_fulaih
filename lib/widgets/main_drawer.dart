@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key key}) : super(key: key);
 
-  Widget buildListTile( String title,IconData icon,){
+  Widget buildListTile(
+    String title,
+    IconData icon,
+  ) {
     return ListTile(
       leading: Icon(
         icon,
@@ -44,35 +47,13 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           SizedBox(height: 20),
-          ListTile(
-            leading: Icon(
-              Icons.restaurant,
-              size: 26,
-            ),
-            title: Text(
-              "Meals",
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {},
+          buildListTile(
+            "Meals",
+            Icons.restaurant,
           ),
-          ListTile(
-            leading: Icon(
-              Icons.settings,
-              size: 26,
-            ),
-            title: Text(
-              "Filters",
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'RobotoCondensed',
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            onTap: () {},
+          buildListTile(
+            "Filters",
+            Icons.settings,
           ),
         ],
       ),
