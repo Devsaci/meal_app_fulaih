@@ -25,6 +25,24 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20),
+          ListTile(
+            leading: Icon(
+              Icons.restaurant,
+              size: 26,
+            ),
+            title: Text(
+              "Meals",
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {
+
+            },
+          ),
         ],
       ),
     );
