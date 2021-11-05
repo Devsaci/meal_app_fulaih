@@ -39,9 +39,22 @@ class MainDrawer extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            onTap: () {
-
-            },
+            onTap: () {},
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.settings,
+              size: 26,
+            ),
+            title: Text(
+              "Filters",
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            onTap: () {},
           ),
         ],
       ),
