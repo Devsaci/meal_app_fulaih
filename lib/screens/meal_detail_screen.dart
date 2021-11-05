@@ -62,6 +62,17 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ),
           buildSectionTitle(context, 'Steps'),
+          buildContainer(
+            ListView.builder(
+              itemBuilder: (ctx, index) => Card(
+                  color: Theme.of(context).accentColor,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: Text(selectedMeal.steps[index]),
+                  )),
+              itemCount: selectedMeal.steps.length,
+            ),
+          ),
         ],
       ),
     );
