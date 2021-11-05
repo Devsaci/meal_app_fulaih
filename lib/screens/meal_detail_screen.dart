@@ -14,8 +14,9 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
-  Widget buildContainer(Widget child){
-    return   Container(
+
+  Widget buildContainer(Widget child) {
+    return Container(
       decoration: BoxDecoration(
         color: Colors.white38,
         border: Border.all(color: Colors.grey),
@@ -48,18 +49,9 @@ class MealDetailScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          buildSectionTitle(context,'Ingredients'),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white38,
-              border: Border.all(color: Colors.grey),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            margin: EdgeInsets.all(10),
-            padding: EdgeInsets.all(10),
-            height: 150,
-            width: 300,
-            child: ListView.builder(
+          buildSectionTitle(context, 'Ingredients'),
+          buildContainer(
+            ListView.builder(
               itemBuilder: (ctx, index) => Card(
                   color: Theme.of(context).accentColor,
                   child: Padding(
@@ -69,7 +61,7 @@ class MealDetailScreen extends StatelessWidget {
               itemCount: selectedMeal.ingredients.length,
             ),
           ),
-          buildSectionTitle(context,'Steps'),
+          buildSectionTitle(context, 'Steps'),
         ],
       ),
     );
