@@ -1,15 +1,29 @@
 import 'package:flutter/material.dart';
 
+import 'categories_screen.dart';
+import 'favorites_screen.dart';
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({Key key}) : super(key: key);
-
 
   @override
   _TabsScreenState createState() => _TabsScreenState();
 }
 
 class _TabsScreenState extends State<TabsScreen> {
+  final List<Map<String, Object>> _pages = [
+    {
+      // ignore: prefer_const_constructors
+      'page': CategoriesScreen(),
+      'title': 'categories',
+    },
+    {
+      // ignore: prefer_const_constructors
+      'page': FavoritesScren(),
+      'title': 'your_favorites',
+    },
+  ];
+
   int _selectedPageIndex = 0;
 
   void _selectPage(int value) {
@@ -40,8 +54,4 @@ class _TabsScreenState extends State<TabsScreen> {
       ),
     );
   }
-
-
-
-
 }
