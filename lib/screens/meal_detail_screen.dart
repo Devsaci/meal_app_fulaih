@@ -10,7 +10,10 @@ class MealDetailScreen extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Text(
         text,
-        style: Theme.of(context).textTheme.subtitle1,
+        style: Theme
+            .of(context)
+            .textTheme
+            .subtitle1,
       ),
     );
   }
@@ -32,7 +35,10 @@ class MealDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final mealId = ModalRoute.of(context).settings.arguments as String;
+    final mealId = ModalRoute
+        .of(context)
+        .settings
+        .arguments as String;
     final selectedMeal = DUMMY_MEALS.firstWhere((meal) => meal.id == mealId);
 
     return Scaffold(
@@ -40,7 +46,7 @@ class MealDetailScreen extends StatelessWidget {
         title: Text(selectedMeal.title),
       ),
       body: SingleChildScrollView(
-        child:  Column(
+        child: Column(
           children: [
             Container(
               height: 300,
@@ -53,24 +59,30 @@ class MealDetailScreen extends StatelessWidget {
             buildSectionTitle(context, 'Ingredients'),
             buildContainer(
               ListView.builder(
-                itemBuilder: (ctx, index) => Card(
-                    color: Theme.of(context).accentColor,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      child: Text(selectedMeal.ingredients[index]),
-                    )),
+                itemBuilder: (ctx, index) =>
+                    Card(
+                        color: Theme
+                            .of(context)
+                            .accentColor,
+                        child: Padding(
+                          padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                          child: Text(selectedMeal.ingredients[index]),
+                        )),
                 itemCount: selectedMeal.ingredients.length,
               ),
             ),
             buildSectionTitle(context, 'Steps'),
             buildContainer(
               ListView.builder(
-                itemBuilder: (ctx, index) => Card(
-                    color: Theme.of(context).accentColor,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-                      child: Text(selectedMeal.steps[index]),
-                    )),
+                itemBuilder: (ctx, index) =>
+                    ListTile(
+                      leading: CircleAvatar(
+                          child: Text("# ${index + 1}"),
+                      ),
+                      title: Text(selectedMeal.steps[index]),
+
+                    ),
                 itemCount: selectedMeal.steps.length,
               ),
             ),
