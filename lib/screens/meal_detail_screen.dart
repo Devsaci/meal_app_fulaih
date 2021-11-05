@@ -14,7 +14,7 @@ class MealDetailScreen extends StatelessWidget {
       ),
     );
   }
-  Widget buildContainer(){
+  Widget buildContainer(Widget child){
     return   Container(
       decoration: BoxDecoration(
         color: Colors.white38,
@@ -25,15 +25,7 @@ class MealDetailScreen extends StatelessWidget {
       padding: EdgeInsets.all(10),
       height: 150,
       width: 300,
-      child: ListView.builder(
-        itemBuilder: (ctx, index) => Card(
-            color: Theme.of(context).accentColor,
-            child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
-              child: Text(selectedMeal.ingredients[index]),
-            )),
-        itemCount: selectedMeal.ingredients.length,
-      ),
+      child: child,
     );
   }
 
@@ -57,7 +49,26 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ),
           buildSectionTitle(context,'Ingredients'),
-          buildContainer(),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white38,
+              border: Border.all(color: Colors.grey),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: EdgeInsets.all(10),
+            padding: EdgeInsets.all(10),
+            height: 150,
+            width: 300,
+            child: ListView.builder(
+              itemBuilder: (ctx, index) => Card(
+                  color: Theme.of(context).accentColor,
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                    child: Text(selectedMeal.ingredients[index]),
+                  )),
+              itemCount: selectedMeal.ingredients.length,
+            ),
+          ),
           buildSectionTitle(context,'Steps'),
         ],
       ),
