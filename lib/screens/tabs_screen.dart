@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
@@ -12,7 +10,16 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Meal"),
+      ),
+      body: null,
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: null),
+        ],
+      ),
+    );
   }
 }
-
