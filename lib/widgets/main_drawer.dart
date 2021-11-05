@@ -5,6 +5,24 @@ import 'package:flutter/material.dart';
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key key}) : super(key: key);
 
+  Widget buildListTile( String title,IconData icon,){
+    return ListTile(
+      leading: Icon(
+        icon,
+        size: 26,
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontSize: 24,
+          fontFamily: 'RobotoCondensed',
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      onTap: () {},
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
