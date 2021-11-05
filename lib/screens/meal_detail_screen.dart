@@ -55,6 +55,7 @@ class MealDetailScreen extends StatelessWidget {
               itemCount: selectedMeal.ingredients.length,
             ),
           ),
+          buildSectionTitle(context,'Steps'),
         ],
       ),
     );
