@@ -38,9 +38,10 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
-      body: null,
+      body: _pages[_selectedPageIndex]['page'] ,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
+
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
