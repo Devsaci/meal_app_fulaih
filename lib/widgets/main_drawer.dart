@@ -1,4 +1,4 @@
-
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -7,6 +7,24 @@ class MainDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer();
+    return Drawer(
+      child: Column(
+        children: [
+          Container(
+            height: 120,
+            width: double.infinity,
+            padding: EdgeInsets.all(20),
+            alignment: Alignment.centerLeft,
+            child: Text(
+              "Couking Up",
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
