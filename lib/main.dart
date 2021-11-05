@@ -18,12 +18,17 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.amber,
         canvasColor: Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
+              // ignore: prefer_const_constructors
               bodyText1: TextStyle(
+                // ignore: prefer_const_constructors
                 color: Color.fromRGBO(20, 50, 50, 1),
               ),
+              // ignore: prefer_const_constructors
               bodyText2: TextStyle(
+                // ignore: prefer_const_constructors
                 color: Color.fromRGBO(20, 50, 50, 1),
               ),
+              // ignore: prefer_const_constructors
               subtitle1: TextStyle(fontFamily: 'RobotoCondensed', fontSize: 18),
             ),
       ),
