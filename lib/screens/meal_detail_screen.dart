@@ -5,15 +5,15 @@ class MealDetailScreen extends StatelessWidget {
   const MealDetailScreen({Key key}) : super(key: key);
   static const routeName = 'meals_detail';
 
-  Widget buildSectionTitle(BuildContext context, String text) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 10),
-      child: Text(
-        text,
-        style: Theme.of(context).textTheme.subtitle1,
-      ),
-    );
-  }
+  // Widget buildSectionTitle(BuildContext context, String text) {
+  //   return Container(
+  //     margin: EdgeInsets.symmetric(vertical: 10),
+  //     child: Text(
+  //       text,
+  //       style: Theme.of(context).textTheme.subtitle1,
+  //     ),
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,8 @@ class MealDetailScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          buildSectionTitle(context,'Ingredients'),
+          // buildSectionTitle(context,'Ingredients'),
+          buildSectionTitle(),
           Container(
             decoration: BoxDecoration(
               color: Colors.white38,
@@ -56,6 +57,25 @@ class MealDetailScreen extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class buildSectionTitle extends StatelessWidget {
+  const buildSectionTitle({
+    Key key,
+  }) : super(key: key);
+
+  String get text => 'Ingrediants';
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: Text(
+        text,
+        style: Theme.of(context).textTheme.subtitle1,
       ),
     );
   }
