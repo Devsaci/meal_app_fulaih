@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class FavoritesScren extends StatefulWidget {
-  const FavoritesScren({Key? key}) : super(key: key);
+  const FavoritesScren({Key key}) : super(key: key);
 
   @override
   _FavoritesScrenState createState() => _FavoritesScrenState();
