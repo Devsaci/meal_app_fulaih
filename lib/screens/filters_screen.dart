@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 
@@ -33,7 +34,12 @@ class _FiltersScreenState extends State<FiltersScreen> {
           Expanded(
             child: ListView(
               children: [
-
+                SwitchListTile(
+                  title: Text("Gluten Free"),
+                  subtitle: Text("Only include gluten free meals"),
+                  value: _GlutenFree,
+                  onChanged: null,
+                )
               ],
             ),
           )
