@@ -64,7 +64,13 @@ class MealItem extends StatelessWidget {
       arguments: id,
     )
         .then((result) {
-      if (result != null) removeItem(result);
+      print("/////////// T1 $result");
+      if (result != null) {
+        print("/////////// T2 $result");
+        removeItem(result);
+        print("/////////// T3 $result");
+      }
+
     });
   }
 

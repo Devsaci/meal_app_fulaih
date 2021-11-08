@@ -19,7 +19,13 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
+    final routeArg =
+    ModalRoute.of(context).settings.arguments as Map<String, String>;
+    final categoryId = routeArg['id'];
+    categoryTitle = routeArg['title'];
+    displayeMeal = DUMMY_MEALS.where((meal) {
+      return meal.categories.contains(categoryId);
+    }).toList();
     super.didChangeDependencies();
   }
 
@@ -29,13 +35,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     // The following assertion was thrown building Builder:
     // dependOnInheritedWidgetOfExactType<_ModalScopeStatus>() or
     // dependOnInheritedElement() was called before _CategoryMealsScreenState.initState() completed.
-    final routeArg =
-        ModalRoute.of(context).settings.arguments as Map<String, String>;
-    final categoryId = routeArg['id'];
-    categoryTitle = routeArg['title'];
-    displayeMeal = DUMMY_MEALS.where((meal) {
-      return meal.categories.contains(categoryId);
-    }).toList();
+
 
     super.initState();
   }
@@ -60,7 +60,10 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
               duration: displayeMeal[index].duration,
               imageUrl: displayeMeal[index].imageUrl,
               complexity: displayeMeal[index].complexity,
-              affordability: displayeMeal[index].affordability);
+              affordability: displayeMeal[index].affordability,
+              removeItem:  _removeMeal,
+              );
+
         },
         itemCount: displayeMeal.length,
       ),
