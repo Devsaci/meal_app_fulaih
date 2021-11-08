@@ -3,16 +3,16 @@ import '../dummy_data.dart';
 import '../models/meal.dart';
 import '../widgets/meal_item.dart';
 
-class displayeMealScreen extends StatefulWidget {
-  displayeMealScreen({Key key});
+class CategoryMealsScreen extends StatefulWidget {
+  CategoryMealsScreen({Key key});
 
   static const routeName = 'categoty_meals';
 
   @override
-  _displayeMealScreenState createState() => _displayeMealScreenState();
+  _CategoryMealsScreenState createState() => _CategoryMealsScreenState();
 }
 
-class _displayeMealScreenState extends State<displayeMealScreen> {
+class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
 
 String categoryTitle;
 List<Meal> displayeMeal;
