@@ -10,6 +10,11 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
+   bool isGlutenFree;
+   bool isLactoseFree;
+   bool isVegan;
+   bool isVegetarian;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
