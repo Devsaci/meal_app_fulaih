@@ -10,10 +10,10 @@ class FiltersScreen extends StatefulWidget {
 }
 
 class _FiltersScreenState extends State<FiltersScreen> {
-   bool _GlutenFree;
-   bool _LactoseFree;
-   bool _Vegan;
-   bool _Vegetarian;
+  bool _GlutenFree = false;
+  bool _LactoseFree = false;
+  bool _Vegan = false;
+  bool _Vegetarian = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,16 @@ class _FiltersScreenState extends State<FiltersScreen> {
       appBar: AppBar(
         title: Text("Your Filters"),
       ),
-      body: Center(
-        child: Text("FiltersScreen"),
+      body: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              "Adjust your meal selection",
+              style: Theme.of(context).textTheme.subtitle1,
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
     );
