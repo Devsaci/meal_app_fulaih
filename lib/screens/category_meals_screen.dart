@@ -12,8 +12,14 @@ class CategoryMealsScreen extends StatefulWidget {
 }
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   void _removeMeal(String mealId){
+
   }
 
   @override
@@ -25,6 +31,8 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     final categoryMeals = DUMMY_MEALS.where((meal) {
       return meal.categories.contains(categoryId);
     }).toList();
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text(categorytitle),
