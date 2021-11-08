@@ -30,6 +30,13 @@ class _FiltersScreenState extends State<FiltersScreen> {
               style: Theme.of(context).textTheme.subtitle1,
             ),
           ),
+          Expanded(
+            child: ListView(
+              children: [
+
+              ],
+            ),
+          )
         ],
       ),
       drawer: MainDrawer(),
