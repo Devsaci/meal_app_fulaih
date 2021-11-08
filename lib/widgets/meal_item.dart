@@ -59,7 +59,7 @@ class MealItem extends StatelessWidget {
     Navigator.of(ctx).pushNamed(
       MealDetailScreen.routeName,
       arguments: id,
-    );
+    ).then((value) => null);
   }
 
   @override
