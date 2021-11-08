@@ -16,8 +16,19 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   String categoryTitle;
   List<Meal> displayeMeal;
 
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+  }
+
   @override
   void initState() {
+    //Exception caught by widgets library
+    // The following assertion was thrown building Builder:
+    // dependOnInheritedWidgetOfExactType<_ModalScopeStatus>() or
+    // dependOnInheritedElement() was called before _CategoryMealsScreenState.initState() completed.
     final routeArg =
         ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
