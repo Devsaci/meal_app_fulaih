@@ -13,30 +13,30 @@ class CategoryMealsScreen extends StatefulWidget {
 }
 
 class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
-
-String categoryTitle;
-List<Meal> displayeMeal;
+  String categoryTitle;
+  List<Meal> displayeMeal;
 
   @override
   void initState() {
     final routeArg =
-    ModalRoute.of(context).settings.arguments as Map<String, String>;
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
-     categoryTitle = routeArg['title'];
-     displayeMeal = DUMMY_MEALS.where((meal) {
+    categoryTitle = routeArg['title'];
+    displayeMeal = DUMMY_MEALS.where((meal) {
       return meal.categories.contains(categoryId);
     }).toList();
 
     super.initState();
   }
 
-  void _removeMeal(String mealId){
-
+  void _removeMeal(String mealId) {
+    setState(() {
+      displayeMeal.removeWhere((element) => false);
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
