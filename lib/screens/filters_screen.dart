@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 
@@ -16,16 +15,17 @@ class _FiltersScreenState extends State<FiltersScreen> {
   bool _Vegan = false;
   bool _Vegetarian = false;
 
-  Widget buildeSwitchLisTile(){
+  Widget buildeSwitchLisTile(
+    String title,
+    String description,
+    bool currentValue,
+    Function updateValue,
+  ) {
     return SwitchListTile(
-      title: Text("Gluten Free"),
-      subtitle: Text("Only include gluten free meals"),
-      value: _GlutenFree,
-      onChanged: (newValue){
-        setState(() {
-          _GlutenFree = newValue;
-        });
-      },
+      title: Text(title),
+      subtitle: Text(description),
+      value: currentValue,
+      onChanged: updateValue,
     );
   }
 
