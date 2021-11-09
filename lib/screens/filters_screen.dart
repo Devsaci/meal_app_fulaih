@@ -17,7 +17,16 @@ class _FiltersScreenState extends State<FiltersScreen> {
   bool _Vegetarian = false;
 
   Widget buildeSwitchLisTile(){
-    return null;
+    return SwitchListTile(
+      title: Text("Gluten Free"),
+      subtitle: Text("Only include gluten free meals"),
+      value: _GlutenFree,
+      onChanged: (newValue){
+        setState(() {
+          _GlutenFree = newValue;
+        });
+      },
+    );
   }
 
   @override
@@ -38,16 +47,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
           Expanded(
             child: ListView(
               children: [
-                SwitchListTile(
-                  title: Text("Gluten Free"),
-                  subtitle: Text("Only include gluten free meals"),
-                  value: _GlutenFree,
-                  onChanged: (newValue){
-                    setState(() {
-                      _GlutenFree = newValue;
-                    });
-                  },
-                )
+
               ],
             ),
           )
