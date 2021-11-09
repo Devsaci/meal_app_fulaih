@@ -16,6 +16,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
   bool _Vegan = false;
   bool _Vegetarian = false;
 
+  Widget buildeSwitchLisTile(){
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
