@@ -49,11 +49,41 @@ class _FiltersScreenState extends State<FiltersScreen> {
               children: [
                 buildeSwitchLisTile(
                   "Gluten-free",
-                  "Adjust your meal selection",
+                  "Only Include Gluten-free meals",
                   _GlutenFree,
                   (newValue) {
                     setState(() {
                       _GlutenFree = newValue;
+                    });
+                  },
+                ),
+                buildeSwitchLisTile(
+                  "Lactose-free",
+                  "Only Include Lactose-free meals",
+                  _LactoseFree,
+                      (newValue) {
+                    setState(() {
+                      _LactoseFree = newValue;
+                    });
+                  },
+                ),
+                buildeSwitchLisTile(
+                  "Vegetarian",
+                  "Only Include Vegetarian meal",
+                  _Vegetarian,
+                      (newValue) {
+                    setState(() {
+                      _Vegetarian = newValue;
+                    });
+                  },
+                ),
+                buildeSwitchLisTile(
+                  "Vagan",
+                  "Only Include Vagan meal",
+                  _Vegan,
+                      (newValue) {
+                    setState(() {
+                      _Vegan = newValue;
                     });
                   },
                 ),
