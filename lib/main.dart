@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../dummy_data.dart';
+import '../models/meal.dart';
 import '../screens/filters_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/category_meals_screen.dart';
@@ -22,6 +24,7 @@ class _MyAppState extends State<MyApp> {
     'vegetarian': false,
   };
 
+  List<Meal> _availableMeal = DUMMY_MEALS;
   void _setFilters(Map<String, bool> _filterData) {
     setState(() {
       _filters = _filterData;
