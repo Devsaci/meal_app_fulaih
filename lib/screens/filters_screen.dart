@@ -57,12 +57,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Vegetarian",
                   "Only Include Vegetarian meal",
                   _Vegetarian,
-                  (newValue) {
-                    setState(() {
-                      _Vegetarian = newValue;
-                    });
-                  },
-                ),
+                      (newValue) => setState(() => _Vegetarian = newValue,),),
                 buildeSwitchLisTile(
                   "Vagan",
                   "Only Include Vagan meal",
