@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
       // home: MyHomePage(),
       routes: {
         '/': (context) => TabsScreen(),
-        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(),
+        CategoryMealsScreen.routeName: (context) => CategoryMealsScreen(_availableMeal),
         // ignore: prefer_const_constructors
         MealDetailScreen.routeName: (context) => MealDetailScreen(),
         // ignore: prefer_const_constructors

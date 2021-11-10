@@ -4,9 +4,11 @@ import '../models/meal.dart';
 import '../widgets/meal_item.dart';
 
 class CategoryMealsScreen extends StatefulWidget {
-  CategoryMealsScreen({Key key});
 
+  // final List<Meal> availableMeal;
   static const routeName = 'categoty_meals';
+
+   CategoryMealsScreen(List<Meal> availableMeal, {Key key}) : super(key: key);
 
   @override
   _CategoryMealsScreenState createState() => _CategoryMealsScreenState();
@@ -16,11 +18,10 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
   String categoryTitle;
   List<Meal> displayeMeal;
 
-
   @override
   void didChangeDependencies() {
     final routeArg =
-    ModalRoute.of(context).settings.arguments as Map<String, String>;
+        ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
     categoryTitle = routeArg['title'];
     displayeMeal = DUMMY_MEALS.where((meal) {
@@ -35,7 +36,6 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
     // The following assertion was thrown building Builder:
     // dependOnInheritedWidgetOfExactType<_ModalScopeStatus>() or
     // dependOnInheritedElement() was called before _CategoryMealsScreenState.initState() completed.
-
 
     super.initState();
   }
@@ -55,15 +55,14 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return MealItem(
-              id: displayeMeal[index].id,
-              title: displayeMeal[index].title,
-              duration: displayeMeal[index].duration,
-              imageUrl: displayeMeal[index].imageUrl,
-              complexity: displayeMeal[index].complexity,
-              affordability: displayeMeal[index].affordability,
-              removeItem:  _removeMeal,
-              );
-
+            id: displayeMeal[index].id,
+            title: displayeMeal[index].title,
+            duration: displayeMeal[index].duration,
+            imageUrl: displayeMeal[index].imageUrl,
+            complexity: displayeMeal[index].complexity,
+            affordability: displayeMeal[index].affordability,
+            removeItem: _removeMeal,
+          );
         },
         itemCount: displayeMeal.length,
       ),
