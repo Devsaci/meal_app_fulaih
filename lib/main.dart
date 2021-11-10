@@ -14,6 +14,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  Map<String, bool> _filters = {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
