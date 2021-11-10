@@ -14,12 +14,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // ignore: unused_field, prefer_final_fields
   Map<String, bool> _filters = {
     'gluten' : false,
     'lactose' : false,
     'vega' : false,
     'vegetarian' : false,
   };
+
+  void _setFilters(){
+
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
