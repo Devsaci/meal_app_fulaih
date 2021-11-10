@@ -33,7 +33,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         title: Text("Your Filters"),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: widget.saveFilters,
             icon: Icon(
               Icons.save,
               size: 25,
