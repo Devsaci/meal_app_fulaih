@@ -62,12 +62,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Vagan",
                   "Only Include Vagan meal",
                   _Vegan,
-                  (newValue) {
-                    setState(() {
-                      _Vegan = newValue;
-                    });
-                  },
-                ),
+                      (newValue) => setState(() => _Vegan = newValue,),),
               ],
             ),
           )
