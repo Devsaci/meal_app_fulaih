@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
       _filters = _filterData;
       _availableMeal = DUMMY_MEALS.where((meal) {
 
-      });
+      }).toList();
     });
   }
 
