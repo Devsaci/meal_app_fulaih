@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
     'vegetarian' : false,
   };
 
-  void _setFilters(){
+  void _setFilters(Map<String, bool> _filters){
 
   }
 
