@@ -47,17 +47,12 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Gluten-free",
                   "Only Include Gluten-free meals",
                   _GlutenFree,
-                  (newValue) => setState(() => _GlutenFree = newValue,),),
+                      (newValue) => setState(() => _GlutenFree = newValue,),),
                 buildeSwitchLisTile(
                   "Lactose-free",
                   "Only Include Lactose-free meals",
                   _LactoseFree,
-                  (newValue) {
-                    setState(() {
-                      _LactoseFree = newValue;
-                    });
-                  },
-                ),
+                      (newValue) => setState(() => _LactoseFree = newValue,),),
                 buildeSwitchLisTile(
                   "Vegetarian",
                   "Only Include Vegetarian meal",
