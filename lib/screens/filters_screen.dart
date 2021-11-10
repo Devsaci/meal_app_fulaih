@@ -15,12 +15,8 @@ class _FiltersScreenState extends State<FiltersScreen> {
   bool _Vegan = false;
   bool _Vegetarian = false;
 
-  Widget buildeSwitchLisTile(
-    String title,
-    String description,
-    bool currentValue,
-    Function updateValue,
-  ) {
+  Widget buildeSwitchLisTile(String title, String description,
+      bool currentValue, Function updateValue) {
     return SwitchListTile(
       title: Text(title),
       subtitle: Text(description),
@@ -51,17 +47,12 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Gluten-free",
                   "Only Include Gluten-free meals",
                   _GlutenFree,
-                  (newValue) {
-                    setState(() {
-                      _GlutenFree = newValue;
-                    });
-                  },
-                ),
+                  (newValue) => setState(() => _GlutenFree = newValue,),),
                 buildeSwitchLisTile(
                   "Lactose-free",
                   "Only Include Lactose-free meals",
                   _LactoseFree,
-                      (newValue) {
+                  (newValue) {
                     setState(() {
                       _LactoseFree = newValue;
                     });
@@ -71,7 +62,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Vegetarian",
                   "Only Include Vegetarian meal",
                   _Vegetarian,
-                      (newValue) {
+                  (newValue) {
                     setState(() {
                       _Vegetarian = newValue;
                     });
@@ -81,7 +72,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Vagan",
                   "Only Include Vagan meal",
                   _Vegan,
-                      (newValue) {
+                  (newValue) {
                     setState(() {
                       _Vegan = newValue;
                     });
