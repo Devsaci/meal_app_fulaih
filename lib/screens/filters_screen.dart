@@ -68,6 +68,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
           )
         ],
       ),
+      // ignore: prefer_const_constructors
       drawer: MainDrawer(),
     );
   }
