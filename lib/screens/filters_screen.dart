@@ -31,7 +31,14 @@ class _FiltersScreenState extends State<FiltersScreen> {
       appBar: AppBar(
         title: Text("Your Filters"),
         actions: [
-
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.save,
+              size: 25,
+              color: Colors.white,
+            ),
+          )
         ],
       ),
       body: Column(
@@ -50,22 +57,34 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Gluten-free",
                   "Only Include Gluten-free meals",
                   _GlutenFree,
-                      (newValue) => setState(() => _GlutenFree = newValue,),),
+                  (newValue) => setState(
+                    () => _GlutenFree = newValue,
+                  ),
+                ),
                 buildeSwitchLisTile(
                   "Lactose-free",
                   "Only Include Lactose-free meals",
                   _LactoseFree,
-                      (newValue) => setState(() => _LactoseFree = newValue,),),
+                  (newValue) => setState(
+                    () => _LactoseFree = newValue,
+                  ),
+                ),
                 buildeSwitchLisTile(
                   "Vegetarian",
                   "Only Include Vegetarian meal",
                   _Vegetarian,
-                      (newValue) => setState(() => _Vegetarian = newValue,),),
+                  (newValue) => setState(
+                    () => _Vegetarian = newValue,
+                  ),
+                ),
                 buildeSwitchLisTile(
                   "Vagan",
                   "Only Include Vagan meal",
                   _Vegan,
-                      (newValue) => setState(() => _Vegan = newValue,),),
+                  (newValue) => setState(
+                    () => _Vegan = newValue,
+                  ),
+                ),
               ],
             ),
           )

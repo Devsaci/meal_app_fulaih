@@ -19,7 +19,7 @@ class _MyAppState extends State<MyApp> {
     'lactose' : false,
     'vega' : false,
     'vegetarian' : false,
-  }
+  };
 
   @override
   Widget build(BuildContext context) {
