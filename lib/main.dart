@@ -25,11 +25,12 @@ class _MyAppState extends State<MyApp> {
   };
 
   List<Meal> _availableMeal = DUMMY_MEALS;
+
   void _setFilters(Map<String, bool> _filterData) {
     setState(() {
       _filters = _filterData;
       _availableMeal = DUMMY_MEALS.where((meal) {
-
+        return;
       }).toList();
     });
   }
