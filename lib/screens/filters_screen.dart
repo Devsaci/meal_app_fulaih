@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
-  const FiltersScreen({Key key}) : super(key: key);
+  const FiltersScreen(void Function(Map<String, bool> _filterData) setFilters, {Key key, this.saveFilters}) : super(key: key);
   static const routeName = '/filters';
+  final Function saveFilters;
 
   @override
   State<FiltersScreen> createState() => _FiltersScreenState();
