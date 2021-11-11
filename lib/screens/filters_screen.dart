@@ -37,10 +37,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
           IconButton(
             onPressed: () {
               final Map<String, bool> selectedFilters = {
-                'gluten': false,
-                'lactose': false,
-                'vega': false,
-                'vegetarian': false,
+                'gluten': _GlutenFree,
+                'lactose': _LactoseFree,
+                'vega': _Vegan,
+                'vegetarian': _Vegetarian,
               };
               widget.saveFilters();
             },
