@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
-  const FiltersScreen(void Function(Map<String, bool> _filterData) setFilters,
-      {Key key, this.saveFilters})
-      : super(key: key);
   static const routeName = '/filters';
   final Function saveFilters;
+  FiltersScreen(this.saveFilters);
+
 
   @override
   State<FiltersScreen> createState() => _FiltersScreenState();
@@ -68,33 +67,41 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   "Gluten-free",
                   "Only Include Gluten-free meals",
                   _GlutenFree,
-                  (newValue) => setState(
-                    () => _GlutenFree = newValue,
-                  ),
+                  (newValue) {
+                    setState(() {
+                      _GlutenFree = newValue;
+                    });
+                  },
                 ),
                 buildeSwitchLisTile(
                   "Lactose-free",
                   "Only Include Lactose-free meals",
                   _LactoseFree,
-                  (newValue) => setState(
-                    () => _LactoseFree = newValue,
-                  ),
+                  (newValue) {
+                    setState(() {
+                      _LactoseFree = newValue;
+                    });
+                  },
                 ),
                 buildeSwitchLisTile(
                   "Vegetarian",
                   "Only Include Vegetarian meal",
                   _Vegetarian,
-                  (newValue) => setState(
-                    () => _Vegetarian = newValue,
-                  ),
+                  (newValue) {
+                    setState(() {
+                      _Vegetarian = newValue;
+                    });
+                  },
                 ),
                 buildeSwitchLisTile(
                   "Vagan",
                   "Only Include Vagan meal",
                   _Vegan,
-                  (newValue) => setState(
-                    () => _Vegan = newValue,
-                  ),
+                  (newValue) {
+                    setState(() {
+                      _Vegan = newValue;
+                    });
+                  },
                 ),
               ],
             ),

@@ -9,6 +9,8 @@ class FavoritesScren extends StatefulWidget {
 }
 
 class _FavoritesScrenState extends State<FavoritesScren> {
+
+
   @override
   Widget build(BuildContext context) {
     return Center(
