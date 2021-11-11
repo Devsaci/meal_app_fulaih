@@ -23,7 +23,7 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
         ModalRoute.of(context).settings.arguments as Map<String, String>;
     final categoryId = routeArg['id'];
     categoryTitle = routeArg['title'];
-    displayeMeal = DUMMY_MEALS.where((meal) {
+    displayeMeal = widget.availableMeal.where((meal) {
       return meal.categories.contains(categoryId);
     }).toList();
     super.didChangeDependencies();
