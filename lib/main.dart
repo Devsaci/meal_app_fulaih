@@ -78,7 +78,7 @@ class _MyAppState extends State<MyApp> {
         // ignore: prefer_const_constructors
         MealDetailScreen.routeName: (context) => MealDetailScreen(),
         // ignore: prefer_const_constructors
-        FiltersScreen.routeName: (context) => FiltersScreen(_setFilters),
+        FiltersScreen.routeName: (context) => FiltersScreen(_filters, _setFilters),
       },
     );
   }

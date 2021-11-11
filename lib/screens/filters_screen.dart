@@ -1,10 +1,13 @@
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 
 class FiltersScreen extends StatefulWidget {
   static const routeName = '/filters';
   final Function saveFilters;
-  FiltersScreen(this.saveFilters);
+  final MapBase<String,bool> currentFilters;
+  FiltersScreen(this.currentFilters, this.saveFilters);
 
 
   @override
