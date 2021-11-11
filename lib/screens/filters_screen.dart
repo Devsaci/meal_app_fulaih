@@ -42,7 +42,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 'vega': _Vegan,
                 'vegetarian': _Vegetarian,
               };
-              widget.saveFilters();
+              widget.saveFilters(selectedFilters);
             },
             icon: Icon(
               Icons.save,
