@@ -6,7 +6,7 @@ import 'package:meal_app_fulaih/widgets/main_drawer.dart';
 class FiltersScreen extends StatefulWidget {
   static const routeName = '/filters';
   final Function saveFilters;
-  final MapBase<String, bool> currentFilters;
+  final Map<String, bool> currentFilters;
 
   FiltersScreen(this.currentFilters, this.saveFilters);
 
